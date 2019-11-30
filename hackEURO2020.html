@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 <style>
+
+body {
+  margin: 20px auto;
+  font-family: 'Lato';
+  font-weight: 300;
+  width: 600px;
+  text-align: center;
+}
+
+button {
+  background: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Lato';
+  margin: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background: orange;
+}
+
 #myProgress {
   width: 100%;
   background-color: #ddd;
@@ -24,9 +58,10 @@
 </div>
 
 <br>
-<button onclick="move()">Взломать ЕВРО</button> 
+<button class="third" onclick="move()">Взломать ЕВРО</button> 
 
 <script>
+
 var i = 0;
 function move() {
   if (i == 0) {
@@ -38,7 +73,7 @@ function move() {
       if (width >= 100) {
         clearInterval(id);
         i = 0;
-        alert('Колямба, ЕВРО взломано ;)');
+        swal("Поздравляю, Колямба!", "ЕВРО взломано ;)", "success");
       } else {
         width++;
         elem.style.width = width + "%";
@@ -47,6 +82,8 @@ function move() {
     }
   }
 }
+
+
 </script>
 
 </body>
